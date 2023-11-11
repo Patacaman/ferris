@@ -1,51 +1,64 @@
-<!-- This works with an international layout -->
+Funciona con el teclado US internacional para poder sacar partido a la capa TILDE, de modo que AltGr + A = Á y que AltGr + N = Ñ
 
-<!-- Notes: -->
-
-<!-- - Double tap Shift to (de)activate CAPS Lock.
-- Double tap li"?" to send "¿".
+Otras funcionalidades
+CapsWord activado al pulsar simultaneamente ambos Shifts
+Tap Dances:
+- Double tap "?" to send "¿".
 - Double tap "!" to send "¡".
 - Double tap "/" to send "\".
 - Double tap "," to send ";".
 - Double tap "." to send ":".
-- Hold down the Enter thumb key to switch to the RAISE layer
-- Hold down the Space thumb key to switch to the LOWER layer
+
+Mod-Tap:
+- Hold down the Enter thumb key to switch to the NAV layer
+- Hold down the Space thumb key to switch to the NUM layer
+- Hold down the BackSpace thumb key to switch to the FUN layer
 - Hold down the LOWER and RAISE layer key to switch to the ADJUST layer
-- From ADJUST Layer you can set the layers Mouse, Gaming or Lower (Numpad + Nav)
- -->
+- From ADJUST Layer you can set the layers Mouse,  or Lower (Numpad + Nav)
+
+Los Modificadores se ubican con Mod-Tap en la Homerow siguiendo el patron GASC(GUI, ALt, Shift, Ctrl) de meñique a indice. 
+Se ha ajustado los tiempos a 300 de Mod-Tap para evitar pulsar Modificadores por error. 
+
+Para la compilación se ejecutaran los siguientes comandos sobre la mitad correspondiente, siendo keymap_name el nombre la carpeta con la configuracion deseada en la ruta qmk_firmware\keyboards\ferris\keymaps
+qmk flash -kb ferris/sweep -km keymap_name -bl avrdude-split-right
+qmk flash -kb ferris/sweep -km keymap_name -bl avrdude-split-left
+
+A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON se utiliza un keymap.c. 
+
+
 ### **Layers**
 
-#### 0. **BASE**
+#### 0. **BASE (Canaria)**
 
 ```text
   ,--------------------------------------------.      ,--------------------------------------------.
-  |      Q |      W |      F |      P |      G |      |      J |      L |      U |      Y |      ? |
+  |      W |      L |      Y |      P |      B |      |      F |      J |      O |      U |      ? |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  |  GUI_A |  ALT_R |  SFT_S |  CTL_T |      D |      |      H |  CTL_N |  SFT_E |	ALT_I |	 GUI_O |
+  |  GUI_C |  ALT_R |  SFT_S |  CTL_T |      D |      |      M |  CTL_N |  SFT_E |	ALT_I |	 GUI_A |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  |      Z |      X |      C |      V |      B |      |      K |      M |      , |      . |      - |
+  |      Q |      Z |      V |      D |      K |      |      X |      H |      / |      , |      . |
   `--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------'
                              |  Tilde |  Space |      |  Enter | BackSP |
                              |        |  [Num] |      |  [Nav] |  [Fun] |
                              `--------+--------'      `--------+--------'
 ```
 
-#### 0. **TILDES**
+#### 0. **TILDE**
 
 ```text
 
   ,--------------------------------------------.      ,--------------------------------------------.
-  |        |        |        |        |        |      |        |        |     Ú  |     Ü  |        |
+  |        |        |        |        |        |      |        |        |     Ó  |     Ú  |     Ü  |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  |     Á  |        |        |        |        |      |        |     Ñ  |     É  |     Í  |     Ó  |
+  |     Ç  |        |        |        |        |      |        |     Ñ  |     É  |     Í  |     Á  |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  |        |        |        |     Ç  |        |      |        |        |        |        |        |
+  |        |        |        |        |        |      |        |        |        |        |        |
   `--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------'
                              |     '  |  ToNum |      |  ToNav | 	DEL	|
                              `--------+--------'      `--------+--------'
 ```
 
-#### 0. **NUMPAD**
+#### 0. **NumPad**
 
 ```text
   ,--------------------------------------------.      ,--------------------------------------------.
@@ -59,12 +72,12 @@
                              `--------+--------'      `--------+--------'
 ```
 
-#### 0. **NAVIGATION**
+#### 0. **Navigation**
 
 
 ```text
   ,--------------------------------------------.      ,--------------------------------------------.
-  |    ESC |        |        |        | ToMouse|      |   PgUP |   HOME |      ↑ |    END |        |
+  |    ESC |        |        |        |        |      |   PgUP |   HOME |      ↑ |    END |        |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
   |    GUI |    Alt |  Shift |   Ctrl |        |      |   PgDN |      ← |      ↓ |      → |        |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
@@ -74,22 +87,8 @@
                              `--------+--------'      `--------+--------'
 ```
 
-#### 0. **MOUSE**
 
-
-```text
-  ,--------------------------------------------.      ,--------------------------------------------.
-  |    ESC |        | Recorte|        |        |      |   PgUP |     M1 |     m↑ |     M2 | Whell↑ |
-  |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  |    GUI |    Alt |  Shift |   Ctrl |        |      |   PgDN |     m← |     m↓ |     m→ | Whell↓ |
-  |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  | To_Base|        |        |        |        |      |   Undo |    Cut |   Copy |  Paste |   Redo |
-  `--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------'
-                             |    Tab |        |      |        |     M3 |
-                             `--------+--------'      `--------+--------'
-```
-
-#### 0. **FUN**
+#### 0. **Functions**
 
 ##### Numpad + Navigation
 
