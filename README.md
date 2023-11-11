@@ -1,24 +1,26 @@
+## **Info General**
 Funciona con el teclado US internacional para poder sacar partido a la capa TILDE, de modo que AltGr + A = Á y que AltGr + N = Ñ
 
-Otras funcionalidades
+### Otras funcionalidades
 CapsWord activado al pulsar simultaneamente ambos Shifts
-Tap Dances:
+#### Tap Dances:
 - Double tap "?" to send "¿".
 - Double tap "!" to send "¡".
 - Double tap "/" to send "\".
 - Double tap "," to send ";".
 - Double tap "." to send ":".
 
-Mod-Tap:
+##### Mod-Tap:
 - Hold down the Enter thumb key to switch to the NAV layer
 - Hold down the Space thumb key to switch to the NUM layer
 - Hold down the BackSpace thumb key to switch to the FUN layer
 - Hold down the LOWER and RAISE layer key to switch to the ADJUST layer
 - From ADJUST Layer you can set the layers Mouse,  or Lower (Numpad + Nav)
-
+  
 Los Modificadores se ubican con Mod-Tap en la Homerow siguiendo el patron GASC(GUI, ALt, Shift, Ctrl) de meñique a indice. 
 Se ha ajustado los tiempos a 300 de Mod-Tap para evitar pulsar Modificadores por error. 
 
+### Flashing
 Para la compilación se ejecutaran los siguientes comandos sobre la mitad correspondiente, siendo keymap_name el nombre la carpeta con la configuracion deseada en la ruta qmk_firmware\keyboards\ferris\keymaps
 qmk flash -kb ferris/sweep -km keymap_name -bl avrdude-split-right
 qmk flash -kb ferris/sweep -km keymap_name -bl avrdude-split-left
@@ -26,7 +28,9 @@ qmk flash -kb ferris/sweep -km keymap_name -bl avrdude-split-left
 A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON se utiliza un keymap.c. 
 
 
-### **Layers**
+
+
+## **Layers**
 
 #### 0. **BASE (Canaria)**
 
@@ -34,7 +38,7 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
   ,--------------------------------------------.      ,--------------------------------------------.
   |      W |      L |      Y |      P |      B |      |      F |      J |      O |      U |      ? |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
-  |  GUI_C |  ALT_R |  SFT_S |  CTL_T |      D |      |      M |  CTL_N |  SFT_E |	ALT_I |	 GUI_A |
+  |  GUI_C |  ALT_R |  SFT_S |  CTL_T |      D |      |      M |  CTL_N |  SFT_E |  ALT_I |  GUI_A |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
   |      Q |      Z |      V |      D |      K |      |      X |      H |      / |      , |      . |
   `--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------'
@@ -46,7 +50,6 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
 #### 0. **TILDE**
 
 ```text
-
   ,--------------------------------------------.      ,--------------------------------------------.
   |        |        |        |        |        |      |        |        |     Ó  |     Ú  |     Ü  |
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
@@ -74,7 +77,6 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
 
 #### 0. **Navigation**
 
-
 ```text
   ,--------------------------------------------.      ,--------------------------------------------.
   |    ESC |        |        |        |        |      |   PgUP |   HOME |      ↑ |    END |        |
@@ -90,8 +92,6 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
 
 #### 0. **Functions**
 
-##### Numpad + Navigation
-
 ```text
   ,--------------------------------------------.      ,--------------------------------------------.
   |    ESC |        | Recorte|        |   NEXT |      |  VolUp |     F7 |     F8 |     F9 |    F12 |
@@ -106,8 +106,6 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
 
 
 #### 0. **Symbols**
-
-##### Numpad + Navigation
 
 ```text
   ,--------------------------------------------.      ,--------------------------------------------.
