@@ -20,6 +20,10 @@ CapsWord activado al pulsar simultaneamente ambos Shifts
 Los Modificadores se ubican con Mod-Tap en la Homerow siguiendo el patron GASC(GUI, ALt, Shift, Ctrl) de meñique a indice. 
 Se ha ajustado los tiempos a 300 de Mod-Tap para evitar pulsar Modificadores por error. 
 
+#### Layers
+Los cambios de capa son MO principalmente, mientras se mantenga pulsado permanecemos en la capa indicada. Para facilitar el uso del numpad o de la cruceta, desde TILDE podemos establecer las capas indicadas hasta que pulsemos To_Base. 
+
+
 ### Flashing
 Para la compilación se ejecutaran los siguientes comandos sobre la mitad correspondiente, siendo keymap_name el nombre la carpeta con la configuracion deseada en la ruta qmk_firmware\keyboards\ferris\keymaps
 qmk flash -kb ferris/sweep -km keymap_name -bl avrdude-split-right
@@ -42,7 +46,7 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
   |      Q |      Z |      V |      D |      K |      |      X |      H |      / |      , |      . |
   `--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------'
-                             |  Tilde |  Space |      |  Enter | BackSP |
+                             |  TILDE |  Space |      |  Enter | BackSP |
                              |        |  [Num] |      |  [Nav] |  [Fun] |
                              `--------+--------'      `--------+--------'
 ```
@@ -57,7 +61,7 @@ A diferencia de la configuracion habitual de Ferris, en lugar de un fichero JSON
   |--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------|
   |        |        |        |        |        |      |        |        |        |        |        |
   `--------+--------+--------+--------+--------|      |--------+--------+--------+--------+--------'
-                             |     '  |  ToNum |      |  ToNav | 	DEL	|
+                             |     '  |  ToNum |      |  ToNav |   DEL	|
                              `--------+--------'      `--------+--------'
 ```
 
